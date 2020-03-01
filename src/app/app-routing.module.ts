@@ -1,0 +1,47 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ServicesComponent } from './services/services.component';
+import { PlayerRegistrationComponent  } from './player-registration/player-registration.component';
+import { SponsorshipComponent } from './sponsorship/sponsorship.component';
+import { MissionComponent } from './mission/mission.component';
+
+const appRoutes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent,
+    data: { title: 'Home', animation: 'home' }
+  },
+  {
+    path: 'services',
+    component: ServicesComponent,
+    data: { title: 'Services', animation: 'services' }
+  },
+  {
+    path: 'player-registration',
+    component: PlayerRegistrationComponent,
+    data: { title: 'Player Registration', animation: 'player-registration' }
+  },
+  {
+    path: 'sponsorship',
+    component: SponsorshipComponent,
+    data: { title: 'Sponsorship', animation: 'sponsorship' }
+  },
+  {
+    path: 'mission',
+    component: MissionComponent,
+    data: { title: 'Mission', animation: 'mission' }
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule]
+})
+
+export class AppRoutingModule { }
