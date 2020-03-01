@@ -1,7 +1,6 @@
 (function ($) {
   "use strict";
-
-  // Mobile Navigation
+setTimeout(()=>{  // Mobile Navigation
   if ($('.main-nav').length) {
     var $mobile_nav = $('.main-nav').clone().prop({
       class: 'mobile-nav d-lg-none'
@@ -35,5 +34,6 @@
   } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
+},200)
 
 })(jQuery);
