@@ -11,6 +11,7 @@ import { ServicesComponent } from './services/services.component';
 import { PlayerRegistrationComponent } from './player-registration/player-registration.component';
 import { SponsorshipComponent } from './sponsorship/sponsorship.component';
 import { MissionComponent } from './mission/mission.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MissionComponent } from './mission/mission.component';
     ServicesComponent,
     PlayerRegistrationComponent,
     SponsorshipComponent,
-    MissionComponent
+    MissionComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule

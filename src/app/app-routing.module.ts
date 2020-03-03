@@ -5,6 +5,7 @@ import { ServicesComponent } from './services/services.component';
 import { PlayerRegistrationComponent  } from './player-registration/player-registration.component';
 import { SponsorshipComponent } from './sponsorship/sponsorship.component';
 import { MissionComponent } from './mission/mission.component';
+import { EventsComponent } from './events/events.component';
 
 const appRoutes: Routes = [
   {
@@ -31,6 +32,11 @@ const appRoutes: Routes = [
     path: 'mission',
     component: MissionComponent,
     data: { title: 'Mission', animation: 'mission' }
+  },
+  {
+    path: 'events',
+    component: EventsComponent,
+    data: { title: 'Events', animation: 'events' }
   },
   {
     path: '',

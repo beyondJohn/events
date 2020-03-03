@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { trigger, style, animate, transition, query, group, animateChild } from '@angular/animations';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -37,6 +40,16 @@ import { trigger, style, animate, transition, query, group, animateChild } from 
 export class AppComponent {
   title = 'oxygenNJ';
 
+  constructor(private activeRoute: Router) {
+
+  }
+  isActive(route) {
+    const id = this.activeRoute.url;
+    console.log('route: ', route);
+    console.log('id: ', id);
+    if (id === route)
+      return 'active'
+  }
   getRouteAnimation(outlet) {
     return outlet.activatedRouteData.animation;
   }
