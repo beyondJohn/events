@@ -40,7 +40,7 @@ const appRoutes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'mission',
     pathMatch: 'full'
   }
 ];
