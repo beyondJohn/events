@@ -45,8 +45,6 @@ export class AppComponent {
   }
   isActive(route) {
     const id = this.activeRoute.url;
-    console.log('route: ', route);
-    console.log('id: ', id);
     if (id === route)
       return 'active'
   }

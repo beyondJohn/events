@@ -2,14 +2,11 @@
   "use strict";
 
   setTimeout(() => {
-    $('.counter').counterUp({
-      delay: 10,
-      time: 2000
-    });
+    
 
     // jQuery counterUp (used in Whu Us section)
     $('[data-toggle="counter-up"]').counterUp({
-      delay: 10,
+      delay: 1,
       time: 1000
     });
 
