@@ -6,6 +6,7 @@ import { PlayerRegistrationComponent  } from './player-registration/player-regis
 import { SponsorshipComponent } from './sponsorship/sponsorship.component';
 import { MissionComponent } from './mission/mission.component';
 import { EventsComponent } from './events/events.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const appRoutes: Routes = [
   {
@@ -37,6 +38,11 @@ const appRoutes: Routes = [
     path: 'events',
     component: EventsComponent,
     data: { title: 'Events', animation: 'events' }
+  },
+  {
+    path: 'registration',
+    component: RegistrationComponent,
+    data: { title: 'registration', animation: 'registration' }
   },
   {
     path: '',

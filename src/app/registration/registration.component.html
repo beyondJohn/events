@@ -1,0 +1,92 @@
+<!-- <div style="margin: 186px 60px 60px 60px;"> -->
+<h2 style="color:#163587; font-weight: 600;">
+    2020 oxyGEN-NJ Golf Outing
+</h2>
+<h4>When: Wednesday, March 20th, 2020</h4>
+<h4>Time: 7AM-3PM</h4>
+<h4>Location: Royce Brook Golf Club</h4>
+<h4>Registration Form:</h4>
+<div style="position:relative; height:100%; overflow-y: scroll;">
+    <form (keydown.enter)="$event.preventDefault()" style="position:relative; height:100%; min-height:300px; max-height:600px; margin-bottom: -100px;"
+        [formGroup]="myGroup" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="First" [formControl]="firstName">
+        </mat-form-field>
+        <br />
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Last" [formControl]="lastName">
+        </mat-form-field>
+        <br />
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" [formControl]="email">
+        </mat-form-field>
+        <br />
+        <h2>Registration Type:</h2>
+        <mat-radio-group [formControl]="registrationType" (change)="typeChange()" aria-label="Select an option">
+            <mat-radio-button value="0">
+                Individual Registration ($135 early - by August 31st, $150 regular by September 30th)
+                <br />---per person - includes 18 holes of golf, golf-cart rental, breakfast, banquet lunch
+            </mat-radio-button>
+            <br />
+            <mat-radio-button value="1">
+                Team Registration
+                --please indicate your team members below
+            </mat-radio-button>
+            <br />
+            <mat-radio-button value="2">
+                Non-Golfer ($45)
+                --breakfast and banquet lunch only
+            </mat-radio-button>
+        </mat-radio-group>
+        <br /><br />
+        <div [ngClass]="showTeamFields(registrationType)">
+            <h2>List other team members and email address ( First, Last, Email)</h2>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Team Member 1" [formControl]="teamMember1">
+            </mat-form-field>
+            <br />
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Team Member 2" [formControl]="teamMember2">
+            </mat-form-field>
+            <br />
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Team Member 3" [formControl]="teamMember3">
+            </mat-form-field>
+            <br /><br />
+            <h2>Please indicate below if you or any team members will need to rent clubs:</h2>
+            <mat-radio-group [formControl]="needClubs"  aria-label="Select an option">
+                <mat-radio-button value="yes">
+                    Yes
+                </mat-radio-button>
+                <br />
+                <mat-radio-button value="no">
+                    No
+                </mat-radio-button>
+            </mat-radio-group>
+            <br />
+            <mat-form-field [ngClass]="showClubsQty()">
+                <mat-label># of bags</mat-label>
+                <select matNativeControl [formControl]="needClubsQty" name="needBag">
+                    <option value="" selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </mat-form-field>
+
+
+        </div>
+        
+        <!-- <input matInput placeholder="Last" [formControl]="lastName"> -->
+
+        <!-- <mat-form-field class="example-full-width">
+        <input matInput placeholder="Quick Descript" [value]="describe" [(ngModel)]="describe"
+            [ngModelOptions]="{standalone: true}">
+    </mat-form-field> -->
+        <br />
+        <button mat-raised-button color="primary" (click)="formHandler()">Submit Registration</button>
+    </form>
+    <!-- </div> -->
+
+</div>

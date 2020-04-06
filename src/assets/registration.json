@@ -1,0 +1,15 @@
+{
+    "firstName": "John",
+    "lastName": "Piesco",
+    "registrationType": 1,
+    "teamMembers": [
+        "phil",
+        "larry",
+        "sue"
+    ],
+    "needClubs": 0,
+    "qtyOfClubs": 0,
+    "payingSeparately": false,
+    "paymentMethod": 1,
+    "specialNeeds": ""
+}

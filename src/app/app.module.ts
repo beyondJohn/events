@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,6 +13,22 @@ import { PlayerRegistrationComponent } from './player-registration/player-regist
 import { SponsorshipComponent } from './sponsorship/sponsorship.component';
 import { MissionComponent } from './mission/mission.component';
 import { EventsComponent } from './events/events.component';
+import { RegistrationComponent } from './registration/registration.component';
+
+import {
+  MatFormFieldModule, MatInputModule, MatIconModule
+  , MatDialogModule, MatCardModule, MatProgressSpinnerModule
+  , MatButtonModule, MatSelectModule, MatCheckboxModule
+  , MatRadioModule
+
+} from '@angular/material';
+
+const matModules = [
+  MatFormFieldModule, MatInputModule, MatIconModule
+  , MatDialogModule, MatCardModule, MatProgressSpinnerModule
+  , MatButtonModule, MatSelectModule, MatCheckboxModule
+  , MatRadioModule
+];
 
 @NgModule({
   declarations: [
@@ -21,7 +38,8 @@ import { EventsComponent } from './events/events.component';
     PlayerRegistrationComponent,
     SponsorshipComponent,
     MissionComponent,
-    EventsComponent
+    EventsComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule
@@ -29,8 +47,12 @@ import { EventsComponent } from './events/events.component';
     , BrowserAnimationsModule
     , HttpClientModule
     , RouterModule
+    , matModules
+    , ReactiveFormsModule
+    , FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+  , entryComponents:[RegistrationComponent]
 })
 export class AppModule { }
