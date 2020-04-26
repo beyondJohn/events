@@ -22,6 +22,7 @@ import {
   , MatRadioModule
 
 } from '@angular/material';
+import { ReportComponent } from './report/report.component';
 
 const matModules = [
   MatFormFieldModule, MatInputModule, MatIconModule
@@ -39,7 +40,8 @@ const matModules = [
     SponsorshipComponent,
     MissionComponent,
     EventsComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule

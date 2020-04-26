@@ -8,3 +8,6 @@ h4{
 .hide{
     display: none;
 }
+.title{
+    font-weight: 700;
+}

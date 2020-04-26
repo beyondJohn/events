@@ -7,6 +7,7 @@ import { SponsorshipComponent } from './sponsorship/sponsorship.component';
 import { MissionComponent } from './mission/mission.component';
 import { EventsComponent } from './events/events.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { ReportComponent } from './report/report.component';
 
 const appRoutes: Routes = [
   {
@@ -43,6 +44,11 @@ const appRoutes: Routes = [
     path: 'registration',
     component: RegistrationComponent,
     data: { title: 'registration', animation: 'registration' }
+  },
+  {
+    path: 'report',
+    component: ReportComponent,
+    data: { title: 'report', animation: 'report' }
   },
   {
     path: '',
